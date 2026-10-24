@@ -1,0 +1,7 @@
+spark:
+  app_name: "false-positive-fraud-report"
+
+paths:
+  pagamentos: "./data/input/dataset-json-pagamentos/data/pagamentos.json.gz"
+  pedidos: "./data/input/datasets-csv-pedidos/data/pedidos/"
+  output: "./data/output/fraud_report"
