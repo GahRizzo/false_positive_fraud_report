@@ -2,6 +2,14 @@ spark:
   app_name: "false-positive-fraud-report"
 
 paths:
-  pagamentos: "./data/input/dataset-json-pagamentos/data/pagamentos.json.gz"
+  pagamentos: "./data/input/dataset-json-pagamentos/data/pagamentos/"
   pedidos: "./data/input/datasets-csv-pedidos/data/pedidos/"
   output: "./data/output/fraud_report"
+
+file_options:
+  pagamentos_json:
+    compression: "gzip"
+  pedidos_csv:
+    compression: "gzip"
+    header: True
+    sep: ";"
