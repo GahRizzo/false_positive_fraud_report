@@ -13,3 +13,6 @@ file_options:
     compression: "gzip"
     header: True
     sep: ";"
+
+transformer:
+  target_year: 2025

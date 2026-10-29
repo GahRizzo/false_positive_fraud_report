@@ -43,3 +43,10 @@ class DataHandler:
         """Carrega o dataframe de pedidos a partir de um arquivo CSV."""
         schema = self._get_schema_pedidos()
         return self.spark.read.option("compression", compression).csv(path, header=header, schema=schema, sep=sep)
+    
+    def write_parquet(self, dataframe: DataFrame, path: str):
+        """
+        Write a dataframe in parquet format
+        """
+        dataframe.write.mode("overwrite").parquet(path)
+        print(f"Dados salvos com sucesso em: {path}")
